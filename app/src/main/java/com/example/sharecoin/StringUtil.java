@@ -1,6 +1,7 @@
 package com.example.sharecoin;
 
 import java.security.MessageDigest;
+import java.security.PublicKey;
 
 public class StringUtil
 {
@@ -36,5 +37,8 @@ public class StringUtil
 
         }
 
+    }
+
+    public static String getStringFromKey(PublicKey sender) {
     }
 }
