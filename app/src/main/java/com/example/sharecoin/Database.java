@@ -76,7 +76,7 @@ public class Database
                 checkUser = true;
             }
         } catch (SQLException ex) {
-            
+
         }
         return checkUser;
     }
