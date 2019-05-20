@@ -65,7 +65,8 @@ public class Medlem implements MedlemImpl {
     }
 
     @Override
-    public void sletMedlemmer(int cvr) {
+    public void sletMedlemmer(int cvr)
+    {
 
     }
 }
