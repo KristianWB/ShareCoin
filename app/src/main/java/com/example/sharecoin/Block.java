@@ -14,7 +14,7 @@ public class Block
     private long timeStamp; //as number of milliseconds since 1/1/1970.
 
     private int nonce;
-    private ArrayList<Transaction> transactions;
+    public ArrayList<Transaction> transactions;
 
 
     //Block Constructor.

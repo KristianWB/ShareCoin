@@ -50,7 +50,7 @@ public class Medlem implements MedlemImpl {
         this.cvr = cvr;
     }
 
-    0
+
 
     @Override
     public void opretMedlemmer(String virksomhedsnavn, int cvr)
