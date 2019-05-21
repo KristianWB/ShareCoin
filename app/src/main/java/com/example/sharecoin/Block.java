@@ -1,5 +1,6 @@
 package com.example.sharecoin;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Block
@@ -13,6 +14,7 @@ public class Block
     private long timeStamp; //as number of milliseconds since 1/1/1970.
 
     private int nonce;
+    private ArrayList<Transaction> transactions;
 
 
     //Block Constructor.
@@ -68,6 +70,33 @@ public class Block
         }
 
         System.out.println("Block Mined!!! : " + hash);
+
+    }
+
+
+    public boolean addTransaction(Transaction transaction) {
+
+        //process transaction and check if valid, unless block is genesis block then ignore.
+
+        if(transaction == null) return false;
+
+        if((previousHash != "0")) {
+
+            if((transaction.processTransaction() != true)) {
+
+                System.out.println("Transaction failed to process. Discarded.");
+
+                return false;
+
+            }
+
+        }
+
+        transactions.add(transaction);
+
+        System.out.println("Transaction Successfully added to Block");
+
+        return true;
 
     }
 }
