@@ -3,25 +3,39 @@ package com.example.sharecoin;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
-import java.security.Key;
-import java.security.MessageDigest;
-import java.security.PrivateKey;
-import java.security.PublicKey;
-import java.security.Signature;
+import java.security.*;
+
 import java.util.ArrayList;
+
 import java.util.Base64;
 
-public class StringUtil
-{
+import com.google.gson.GsonBuilder;
+
+import java.util.List;
+
+
+
+public class StringUtil {
+
+
+
+    //Applies Sha256 to a string and returns the result.
+
     public static String applySha256(String input){
+
+
 
         try {
 
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
 
+
+
             //Applies sha256 to our input,
 
             byte[] hash = digest.digest(input.getBytes("UTF-8"));
+
+
 
             StringBuffer hexString = new StringBuffer(); // This will contain hash as hexidecimal
 
@@ -46,6 +60,10 @@ public class StringUtil
         }
 
     }
+
+
+
+    //Applies ECDSA Signature and returns the result ( as bytes ).
 
     public static byte[] applyECDSASig(PrivateKey privateKey, String input) {
 
@@ -103,6 +121,26 @@ public class StringUtil
 
 
 
+    //Short hand helper to turn Object into a json string
+
+    public static String getJson(Object o) {
+
+        return new GsonBuilder().setPrettyPrinting().create().toJson(o);
+
+    }
+
+
+
+    //Returns difficulty string target, to compare to hash. eg difficulty of 5 will return "00000"
+
+    public static String getDificultyString(int difficulty) {
+
+        return new String(new char[difficulty]).replace('\0', '0');
+
+    }
+
+
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static String getStringFromKey(Key key) {
 
@@ -111,33 +149,14 @@ public class StringUtil
     }
 
 
-    public void generateSignature(PrivateKey privateKey) {
-
-        String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(reciepient) + Float.toString(value)	;
-
-        signature = StringUtil.applyECDSASig(privateKey,data);
-
-    }
-
-//Verifies the data we signed hasnt been tampered with
-
-    public boolean verifiySignature() {
-
-        String data = StringUtil.getStringFromKey(sender) + StringUtil.getStringFromKey(reciepient) + Float.toString(value)	;
-
-        return StringUtil.verifyECDSASig(sender, data, signature);
-
-    }
-
-    public static String getStringFromKey(PublicKey sender) {
-    }
-
 
     public static String getMerkleRoot(ArrayList<Transaction> transactions) {
 
         int count = transactions.size();
 
-        ArrayList<String> previousTreeLayer = new ArrayList<String>();
+
+
+        List<String> previousTreeLayer = new ArrayList<String>();
 
         for(Transaction transaction : transactions) {
 
@@ -145,13 +164,15 @@ public class StringUtil
 
         }
 
-        ArrayList<String> treeLayer = previousTreeLayer;
+        List<String> treeLayer = previousTreeLayer;
+
+
 
         while(count > 1) {
 
             treeLayer = new ArrayList<String>();
 
-            for(int i=1; i < previousTreeLayer.size(); i++) {
+            for(int i=1; i < previousTreeLayer.size(); i+=2) {
 
                 treeLayer.add(applySha256(previousTreeLayer.get(i-1) + previousTreeLayer.get(i)));
 
@@ -163,9 +184,13 @@ public class StringUtil
 
         }
 
+
+
         String merkleRoot = (treeLayer.size() == 1) ? treeLayer.get(0) : "";
 
         return merkleRoot;
 
     }
+
+   
 }
