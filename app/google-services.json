@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "962837057458",
+    "firebase_url": "https://sharecoin-9b8f6.firebaseio.com",
+    "project_id": "sharecoin-9b8f6",
+    "storage_bucket": "sharecoin-9b8f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962837057458:android:6b61c2db25f405e4",
+        "android_client_info": {
+          "package_name": "com.example.sharecoin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962837057458-ht3kiahrhm5g1sadigragh223qlm0bv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharecoin",
+            "certificate_hash": "6935a626a7e23035bb930df9f7d22dd0957cfa94"
+          }
+        },
+        {
+          "client_id": "962837057458-qe151c2o6ch5pjrjblm358j42p7n8129.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA__WFrMyT0lPhDOjsShBZHx3WEvPW6q-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962837057458-qe151c2o6ch5pjrjblm358j42p7n8129.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
