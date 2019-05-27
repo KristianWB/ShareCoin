@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
+    implements View.OnClickListener{
+        private final String TAG = "FB_SIGNIN";
 
     private static EditText username;
     private static EditText password;
