@@ -5,12 +5,13 @@ import java.util.Date;
 
 public class Block
 {
+    //En datatype, af typen string
     public String hash;
-
+    //En datatype, af typen string
     public String previousHash;
-
+    //En datatype, af typen string
     private String data; //our data will be a simple message.
-
+    //En datatype af long
     private long timeStamp; //as number of milliseconds since 1/1/1970.
 
     private int nonce;

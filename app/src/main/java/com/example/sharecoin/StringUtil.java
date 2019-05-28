@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 import java.util.Base64;
 
-import com.google.gson.GsonBuilder;
+//import com.google.gson.GsonBuilder;
 
 import java.util.List;
 
@@ -123,11 +123,11 @@ public class StringUtil {
 
     //Short hand helper to turn Object into a json string
 
-    public static String getJson(Object o) {
+   /* public static String getJson(Object o) {
 
         return new GsonBuilder().setPrettyPrinting().create().toJson(o);
 
-    }
+    } */
 
 
 
@@ -192,5 +192,5 @@ public class StringUtil {
 
     }
 
-   
+
 }
