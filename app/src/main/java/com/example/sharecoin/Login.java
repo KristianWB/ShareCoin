@@ -31,20 +31,6 @@ public class Login extends AppCompatActivity {
     List<AuthUI.IdpConfig> providers;
     Button btn_sign_out;
 
-    //implements View.OnClickListener{
-     //   private final String TAG = "FB_SIGNIN";
-
-    /*
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
-    */
-    /*
-    private static EditText username;
-    private static EditText password;
-    private static TextView attempt;
-    private static Button login_button;
-    int attempt_counter=5;
-    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,64 +100,5 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    /*
-    public void LoginButton(){
-        username = (EditText)findViewById(R.id.editText_user);
-        password = (EditText)findViewById(R.id.editText_password);
-        attempt = (TextView)findViewById(R.id.textView_attempt);
-        login_button = (Button)findViewById(R.id.button_login);
 
-        attempt.setText(Integer.toString(attempt_counter));
-
-        login_button.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (username.getText().toString().equals("user") &
-                        password.getText().toString().equals("pass")){
-                            Toast.makeText(Login.this,"Username and password is correct",
-                                    Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent("com.abhinavhackpundit.loginapp.User");
-                            startActivity(intent);
-
-                        }
-                        else {
-                            Toast.makeText(Login.this,"Username and password is NOT correct",
-                                    Toast.LENGTH_SHORT).show();
-                            attempt_counter--;
-                            attempt.setText(Integer.toString(attempt_counter));
-                            if(attempt_counter==0)
-                                login_button.setEnabled(false);
-                        }
-                    }
-                }
-        );
-
-    }
-    */
-
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
-        return true;
-    }
-    */
-    /*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-    */
 }
