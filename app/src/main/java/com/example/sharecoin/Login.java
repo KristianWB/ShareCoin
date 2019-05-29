@@ -12,22 +12,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
-    implements View.OnClickListener{
-        private final String TAG = "FB_SIGNIN";
+    //implements View.OnClickListener{
+     //   private final String TAG = "FB_SIGNIN";
 
+    /*
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    */
+    /*
     private static EditText username;
     private static EditText password;
     private static TextView attempt;
     private static Button login_button;
     int attempt_counter=5;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LoginButton();
+        // LoginButton();
     }
 
+    /*
     public void LoginButton(){
         username = (EditText)findViewById(R.id.editText_user);
         password = (EditText)findViewById(R.id.editText_password);
@@ -59,7 +66,9 @@ public class Login extends AppCompatActivity {
                     }
                 }
         );
+
     }
+    */
 
     /*
     @Override

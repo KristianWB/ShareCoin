@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "962837057458-me1hnd2jv9ja0iu8qe70rojgmv4l45st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharecoin",
+            "certificate_hash": "3c8e95db3935e32fc3b5667cff7b7c246bbe117c"
+          }
+        },
+        {
           "client_id": "962837057458-ht3kiahrhm5g1sadigragh223qlm0bv8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
