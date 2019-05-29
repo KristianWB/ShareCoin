@@ -1,4 +1,5 @@
-package com.example.sharecoin;
+/*
+        package com.example.sharecoin;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -120,3 +121,4 @@ public class Medlem implements MedlemImpl {
 
 
 }
+*/
