@@ -2,4 +2,6 @@
     <string name="app_name">ShareCoin</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="button_message">ShiftActivityToMessageWriter</string>
+    <string name="message_writer_name">Message Writer</string>
+    <string name="text_header">Message recieved</string>
 </resources>
