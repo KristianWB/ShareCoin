@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int MY_REQUEST_CODE = 7117; //Any numer is valid
     List<AuthUI.IdpConfig> providers;
     Button btn_sign_out;
+    Button btn_message;
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
 
     @Override
@@ -60,6 +62,20 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+        /*
+        btn_message = (Button)findViewById(R.id.btn_message);
+        btn_message.setOnClickListener(new View.OnClickListener()
+                                       {
+                                           @Override
+                                           public void onClick(View v)
+                                           {
+                                               startActivity()
+                                           }
+                                       }
+        );
+        */
+
+
 
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build()
@@ -78,27 +94,32 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
+    // Her kommer login aktivitets svaret
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == MY_REQUEST_CODE) {
+        if (requestCode == MY_REQUEST_CODE) {   // Vi identificerer proceduren via anmodningsId
             IdpResponse response = IdpResponse.fromResultIntent(data);
-            if (resultCode == RESULT_OK) {
-                // Fetch the user
-                FirebaseUser user = FirebaseAuth
+            if (resultCode == RESULT_OK) {  // Hvis brugeren ikke har annulleret processen eller den på anden vis er obstrueret, så fortsætter vi
+                FirebaseUser user = FirebaseAuth    // Fetch brugeren
                         .getInstance()
                         .getCurrentUser();
-                //Show email on Toast
+                // Så viser vi brugerens email som visuel bekræftelse på at login er lykkedes
                 Toast.makeText(this, "" + user.getEmail(), Toast.LENGTH_SHORT).show();
-                // Opsæt Button signOut
+                // Tillad Button signOut
                 btn_sign_out.setEnabled(true);
             }
             else
             {
+                // Hvis login fejlede fordi brugeren annullerede login processen
                 Toast.makeText(this, ""+response.getError().getMessage(),Toast.LENGTH_SHORT).show();
             }
         }
     }
 
 
+    public void launchMessageWriter(View view)
+    {
+        Log.d(LOG_TAG, "Button clicked!");
+    }
 }
