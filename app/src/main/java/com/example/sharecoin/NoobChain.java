@@ -209,7 +209,7 @@ public class NoobChain {
 
 /*
 
- * public static void main(String[] args) {
+   public static void main(String[] args) {
 
 		//add our blocks to the blockchain ArrayList:
 

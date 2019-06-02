@@ -6,12 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -32,12 +29,16 @@ public class MainActivity extends AppCompatActivity {
     Button btn_sign_out;
     Button btn_message;
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    public static final String EXTRA_MESSAGE = "com.example.sharecoin.extra.MESSAGE";
+    private EditText mMessageEditText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mMessageEditText = (EditText)findViewById(R.id.editText_main);
 
         btn_sign_out = (Button)findViewById(R.id.btn_sign_out);
         btn_sign_out.setOnClickListener(new View.OnClickListener() {
@@ -62,20 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-        /*
-        btn_message = (Button)findViewById(R.id.btn_message);
-        btn_message.setOnClickListener(new View.OnClickListener()
-                                       {
-                                           @Override
-                                           public void onClick(View v)
-                                           {
-                                               startActivity()
-                                           }
-                                       }
-        );
-        */
-
-
 
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build()
@@ -122,6 +109,21 @@ public class MainActivity extends AppCompatActivity {
     {
         Log.d(LOG_TAG, "Button clicked!");
         Intent intent = new Intent(this, MessageWriter.class);
+        String message = mMessageEditText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+    }
+
+    public void goBookingActivity(View view) {
+        Log.d(LOG_TAG, "booking button clicked");
+        Intent bookingIntent = new Intent(this, BookingActivity.class);
+        startActivity(bookingIntent);
+    }
+
+
+    public void goRegisterRoomActivity(View view) {
+        Log.d(LOG_TAG, "Register button clicked");
+        Intent registerIntent = new Intent(this, RegisterActivity.class);
+        startActivity(registerIntent);
     }
 }

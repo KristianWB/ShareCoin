@@ -3,5 +3,13 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="button_message">ShiftActivityToMessageWriter</string>
     <string name="message_writer_name">Message Writer</string>
-    <string name="text_header">Message recieved</string>
+    <string name="text_header">Message received</string>
+    <string name="editText_main">Enter Your Message Here</string>
+    <string name="signout_name">Signout</string>
+    <string name="button_second">Reply</string>
+    <string name="editText_second">Enter Your Reply Here</string>
+    <string name="text_header_reply">Reply Received</string>
+    <string name="book_room">Book mødelokale</string>
+    <string name="register_room">Registrer lokale</string>
+    <string name="requests">Anmodninger</string>
 </resources>
