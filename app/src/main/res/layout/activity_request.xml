@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RequestActivity">
 
     <TextView
-        android:id="@+id/register_headline"
+        android:id="@+id/requests_headline"
         android:layout_width="405dp"
         android:layout_height="43dp"
-        android:text="Registrer lokale"
+        android:text="Anmodninger"
         android:textAlignment="center"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="3dp"

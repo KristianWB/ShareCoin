@@ -121,9 +121,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void goRegisterRoomActivity(View view) {
+    public void goRegisterRoomActivity(View view)
+    {
         Log.d(LOG_TAG, "Register button clicked");
         Intent registerIntent = new Intent(this, RegisterActivity.class);
         startActivity(registerIntent);
+    }
+
+    public void goRequestsActivity(View view)
+    {
+        Log.d(LOG_TAG, "Requests button clicked");
+        Intent requestIntent = new Intent(this, RequestActivity.class);
+        startActivity(requestIntent);
     }
 }

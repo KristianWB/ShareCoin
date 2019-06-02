@@ -39,9 +39,9 @@
 
         <Button
             android:id="@+id/button_request_messages"
+            android:onClick="goRequestsActivity"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-
             android:text="@string/requests">
         </Button>
 

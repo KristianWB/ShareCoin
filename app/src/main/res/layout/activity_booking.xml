@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".BookingActivity">
 
+    <TextView
+        android:id="@+id/booking_headline"
+        android:layout_width="405dp"
+        android:layout_height="43dp"
+        android:text="Mødelokale booking"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="5dp" />
 </android.support.constraint.ConstraintLayout>
