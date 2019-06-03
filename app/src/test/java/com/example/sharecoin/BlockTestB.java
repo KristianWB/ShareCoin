@@ -8,7 +8,7 @@ public class BlockTestB
 
     public void testData()
     {
-        assertArrayEquals("test",nyBlock.getData());
+        assertEquals("test",nyBlock.getData());
     }
 
 }
