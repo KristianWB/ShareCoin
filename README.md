@@ -2,12 +2,13 @@
 Første års projekt
 Lavet af Burhan Öztürk, Kristian Withh Berquist, Kenneth Søgaard, Daniel Sikorsky.
 
-Vi valgte case nummer to , hvor vi stræbede efter at bygge en app i stil med AirBnB.
-Case nummer to, er lagt op af virksomheds foreningen vidensby.dk. De deler lokaler  imellem medlemmerne for at have nye interessante og 
-inspirerende steder at samles i deres respektive virksomheder. På nuværende tidspunkt foregår reservationen af lokalerne enten 
-mundtligt eller skriftligt. Vidensby.dk kunne med fordel bruge en app, i stil med AirBnB, der gør det lettere at overskue mulige lokaler der kan lånes, 
-tidspunkterne for lån, og kontakten til de som man skal låne lokalerne af. Appen kan, som en bonus, samtidig registrere medlemmer og 
-deres lokaler i et register baseret på blockchain modellen, for derigennem at sikre sig medlemskabets lødighed. På denne måde kan 
-låneordningen nemt skaleres op til at inkludere virksomheder med en større distance mellem sig og en mindre kontaktflade, således at 
-systemet ikke er restrikteret til brug af lokale virksomheder med stort gensidigt kendskab .
+Vores projekt er udgangspunktet for vores førsteårsprøve, hvilket også er vores eksamen  for 2. Semester.
+Vi fik valget mellem fire cases der kan arbejdes ud fra for at lave projektet.
+De fire cases, var:
+En app hvilken giver direkte mulighed for at tilkende accept af handlinger
+En app til at dele lokaler imellem virksomheder og hvor registreringen af aktiviteter ville blive lagret ved brug af blockchain teknologien
+En app til at dele musikoplevelser direkte og nemt
+En app til at deltage i en deleinvisterings ordning, hvilken gjorde det muligt at skaffe kapital til køb af ejendomme med så lav en værdi at bankerne ikke ønsker at tildele lån til disse.
+
+Vi valgte case nummer to , hvor vi stræber efter at bygge en app i stil med AirBnB.
 
