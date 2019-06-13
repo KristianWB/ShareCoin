@@ -12,4 +12,7 @@
     <string name="book_room">Book mødelokale</string>
     <string name="register_room">Registrer lokale</string>
     <string name="requests">Anmodninger</string>
+    <string name="lokale_navn">Lokale navn</string>
+    <string name="lokale_adresse">Lokale adresse</string>
+    <string name="button_registrer">Tryk for at registrere</string>
 </resources>
