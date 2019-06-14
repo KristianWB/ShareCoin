@@ -57,7 +57,6 @@ public class RegisterActivity extends AppCompatActivity {
         Map<String, Object> room = new HashMap<>();
         room.put("lokaleNavn", mLokaleNavnText);
         room.put("lokaleAdresse", mLokaleAdresseText);
-
         // Add a new document with a generated ID
         db.collection("MeetingRooms")
                 .add(room)
