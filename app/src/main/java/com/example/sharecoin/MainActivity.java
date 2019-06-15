@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int MY_REQUEST_CODE = 7117; //Any numer is valid
     List<AuthUI.IdpConfig> providers;
     Button btn_sign_out;
-    Button btn_message;
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     public static final String EXTRA_MESSAGE = "com.example.sharecoin.extra.MESSAGE";
     private EditText mMessageEditText;
@@ -37,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mMessageEditText = (EditText)findViewById(R.id.editText_main);
 
         btn_sign_out = (Button)findViewById(R.id.btn_sign_out);
         btn_sign_out.setOnClickListener(new View.OnClickListener() {
@@ -104,15 +101,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    public void launchMessageWriter(View view)
-    {
-        Log.d(LOG_TAG, "Button clicked!");
-        Intent intent = new Intent(this, MessageWriter.class);
-        String message = mMessageEditText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-    }
 
     public void goBookingActivity(View view) {
         Log.d(LOG_TAG, "booking button clicked");

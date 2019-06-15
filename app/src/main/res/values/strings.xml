@@ -15,4 +15,7 @@
     <string name="lokale_navn">Lokale navn</string>
     <string name="lokale_adresse">Lokale adresse</string>
     <string name="button_registrer">Tryk for at registrere</string>
+    <string name="request_activity_name">Request Activity</string>
+    <string name="register_activity_name">Register Activity</string>
+    <string name="booking_activity_name">Booking Activity</string>
 </resources>

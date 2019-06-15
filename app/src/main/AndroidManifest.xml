@@ -9,12 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestActivity"></activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".BookingActivity" />
-        <activity
-            android:name=".MessageWriter"
-            android:label="@string/message_writer_name"
+        <activity android:name=".RequestActivity"
+            android:label="@string/request_activity_name"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sharecoin.MainActivity" />
+        </activity>
+        <activity android:name=".RegisterActivity"
+            android:label="@string/register_activity_name"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sharecoin.MainActivity" />
+        </activity>
+        <activity android:name=".BookingActivity"
+            android:label="@string/booking_activity_name"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
