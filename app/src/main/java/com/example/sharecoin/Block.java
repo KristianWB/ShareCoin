@@ -19,9 +19,10 @@ public class Block
     //Block Constructor.
     public Block(String data,String previousHash )
     {
-
+        //Sætter lokalvariabel ligemeget klassevariabel
         this.data = data;
         this.previousHash = previousHash;
+
         this.timeStamp = new Date().getTime();
         this.hash = calculateHash();
     }
@@ -29,10 +30,16 @@ public class Block
 
 
 
-
+     //En String metode
     //Beregn hash på baggrund af block indholdet
-    public String calculateHash() {
-        String calculatedhash = StringUtil.applySha256(
+    public String calculateHash()
+    {
+        //Den laver en String hash med tre parametre med brug af en algoritme
+
+        //StringUtil er en klasse med en masse værktøjs metoder, fx applySha256,
+        // som er en hash metode som tager en string og laver den om ved at bruge sha256 algoritmen
+        String calculatedhash = StringUtil.applySha256
+                (
                 previousHash +
                         Long.toString(timeStamp) +
                         Integer.toString(nonce) +
@@ -44,9 +51,12 @@ public class Block
     public void mineBlock(int difficulty)
     {
 
+        //Opretter en ny strıng, med en array char som er størrelsen af int, hvor alt bliver  erstattet af en 0
         String target = new String(new char[difficulty]).replace('\0', '0'); //Create a string with difficulty * "0"
-
-        while(!hash.substring( 0, difficulty).equals(target)) {
+        //Så længe at den første del af hash, fra 0 til difficulty ikke er ens med target ,
+        // så kører hvad der er inde i while løkken
+        while(!hash.substring( 0, difficulty).equals(target))
+        {
 
             nonce ++;
 

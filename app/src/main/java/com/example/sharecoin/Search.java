@@ -26,7 +26,8 @@ public class Search {
         return blockChainContains;
     }
 
-    public void setBlockChainContains(String blockChainContains) {
+    public void setBlockChainContains(String blockChainContains)
+    {
         this.blockChainContains = blockChainContains;
     }
 
